@@ -15,21 +15,31 @@ function wpProQuiz_fetchToplist() {
                     $trs.eq(0).hide().end().eq(1).show();
                     return true;
                 }
-
+                
+                //New vars to keep track if a name already exists in the list.
+                var count = 0;
+                var nameList = '';
+                
                 for (var i = 0, c = data.length; i < c; i++) {
                     var td = clone.clone().children();
+                    
+                    //Test if the name is already higher-up in the list.
+                    if (nameList.indexOf(data[i].name) == -1) {
+                        count++; //Increment the line count.
+                        nameList = nameList + data[i].name + ':'; //Add the name to the tracking list.
+                        
+                        td.eq(0).text(i + 1);
+                        td.eq(1).text(data[i].name);
+                        td.eq(2).text(data[i].date);
+                        td.eq(3).text(data[i].points);
+                        td.eq(4).text(data[i].result + ' %');
 
-                    td.eq(0).text(i + 1);
-                    td.eq(1).text(data[i].name);
-                    td.eq(2).text(data[i].date);
-                    td.eq(3).text(data[i].points);
-                    td.eq(4).text(data[i].result + ' %');
+                        if (i & 1) {
+                            td.addClass('wpProQuiz_toplistTrOdd');
+                        }
 
-                    if (i & 1) {
-                        td.addClass('wpProQuiz_toplistTrOdd');
+                        td.parent().show().appendTo($tp.find('tbody'));
                     }
-
-                    td.parent().show().appendTo($tp.find('tbody'));
                 }
 
                 $trs.eq(0).hide();
