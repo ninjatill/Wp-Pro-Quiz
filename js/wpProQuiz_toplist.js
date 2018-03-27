@@ -38,7 +38,7 @@ function wpProQuiz_fetchToplist() {
                         }
                         
                         td.eq(0).text(i + 1);
-                        td.eq(1).text(data[i].name + atext);
+                        td.eq(1).text(data[i].name);
                         td.eq(2).text(data[i].date);
                         td.eq(3).text(attempts);
                         td.eq(4).text(data[i].points);
