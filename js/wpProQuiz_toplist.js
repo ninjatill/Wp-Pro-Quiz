@@ -28,11 +28,21 @@ function wpProQuiz_fetchToplist() {
                         count++; //Increment the line count.
                         nameList = nameList + data[i].name + ':'; //Add the name to the tracking list.
                         
+                        //Count the number of time the user is listed in the data...
+                        //the number of time the user attempted the quiz.
+                        var attempts = 0;
+                        for (var t = 0, s = data.length; t < s; t++) {
+                            if (data[t].name == data[i].name) {
+                                attempts++;
+                            }
+                        }
+                        
                         td.eq(0).text(i + 1);
-                        td.eq(1).text(data[i].name);
+                        td.eq(1).text(data[i].name + atext);
                         td.eq(2).text(data[i].date);
-                        td.eq(3).text(data[i].points);
-                        td.eq(4).text(data[i].result + ' %');
+                        td.eq(3).text(attempts);
+                        td.eq(4).text(data[i].points);
+                        td.eq(5).text(data[i].result + ' %');
 
                         if (i & 1) {
                             td.addClass('wpProQuiz_toplistTrOdd');
