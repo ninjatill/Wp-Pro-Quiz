@@ -30,10 +30,10 @@ class WpProQuiz_View_FrontToplist extends WpProQuiz_View_View
                 </thead>
                 <tbody>
                 <tr>
-                    <td colspan="5"><?php _e('Table is loading', 'wp-pro-quiz'); ?></td>
+                    <td colspan="6"><?php _e('Table is loading', 'wp-pro-quiz'); ?></td>
                 </tr>
                 <tr style="display: none;">
-                    <td colspan="5"><?php _e('No data available', 'wp-pro-quiz'); ?></td>
+                    <td colspan="6"><?php _e('No data available', 'wp-pro-quiz'); ?></td>
                 </tr>
                 <tr style="display: none;">
                     <td></td>
