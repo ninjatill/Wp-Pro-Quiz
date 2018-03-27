@@ -23,6 +23,7 @@ class WpProQuiz_View_FrontToplist extends WpProQuiz_View_View
                     <th style="width: 40px;"><?php _e('Pos.', 'wp-pro-quiz'); ?></th>
                     <th style="text-align: left !important;"><?php _e('Name', 'wp-pro-quiz'); ?></th>
                     <th style="width: 140px;"><?php _e('Entered on', 'wp-pro-quiz'); ?></th>
+                    <th style="width: 60px;"><?php _e('Attempts', 'wp-pro-quiz'); ?></th>
                     <th style="width: 60px;"><?php _e('Points', 'wp-pro-quiz'); ?></th>
                     <th style="width: 75px;"><?php _e('Result', 'wp-pro-quiz'); ?></th>
                 </tr>
