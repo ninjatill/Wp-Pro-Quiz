@@ -41,6 +41,7 @@ class WpProQuiz_View_FrontToplist extends WpProQuiz_View_View
                     <td style=" color: rgb(124, 124, 124); font-size: x-small;"></td>
                     <td></td>
                     <td></td>
+                    <td></td>
                 </tr>
                 </tbody>
             </table>
